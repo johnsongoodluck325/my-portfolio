@@ -1,3 +1,4 @@
+// portfolio interactive features
 document.addEventListener("DOMContentLoaded", function () {
 
   const darkBtn = document.getElementById("darkModeToggle");
