@@ -9,3 +9,5 @@ Features include:
 - Contact form validation
 - Typed.js typing animation
 This portfolio was created as part of my web development learning.
+Live website:
+https://johnsongoodluck325.github.io/my-portfolio/
