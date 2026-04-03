@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julia Specht | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goodluck Osayemwenre | Portfolio</title>
 
 <link rel="stylesheet" href="css/styles.css">
 
@@ -25,7 +25,9 @@
 
 <h2 id="typing"></h2>
 
-<nav>
+<button id="darkModeToggle">Dark Mode</button>
+
+<nav aria-label="Main Navigation">
 <ul>
 
 <li><a href="#about">About</a></li>
@@ -68,10 +70,16 @@ to expand my technical abilities in HTML, CSS, and JavaScript.
 
 <h3>Portfolio Website</h3>
 
+<img src="images/project1.png" alt="Portfolio website preview" class="project-img" loading="lazy">
+
 <button class="toggle-btn">Show Details</button>
 
 <div class="details">
-<p>This website showcases my projects and skills using HTML, CSS, and JavaScript.</p>
+<p>
+This website showcases my projects and skills using HTML, CSS, and JavaScript.
+It includes interactive features such as dark mode, animated typing text,
+and project detail toggling.
+</p>
 </div>
 
 </div>
@@ -81,14 +89,18 @@ to expand my technical abilities in HTML, CSS, and JavaScript.
 
 <h3>Responsive Layout Project</h3>
 
+<img src="images/project2.png" alt="Responsive layout example 2" class="project-img" loading="lazy">
+
 <button class="toggle-btn">Show Details</button>
 
 <div class="details">
-<p>This project demonstrates responsive design techniques using modern CSS.</p>
+<p>
+This project demonstrates responsive web design techniques using modern CSS,
+ensuring the layout adapts properly across desktop, tablet, and mobile devices.
+</p>
 </div>
 
 </div>
-
 </section>
 
 
@@ -97,13 +109,13 @@ to expand my technical abilities in HTML, CSS, and JavaScript.
 
 <h2>Contact</h2>
 
-<form id="contactForm">
+<form id="contactForm" aria-label="Contact Form">
 
-<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="name" placeholder="Your Name" required>
 
-<input type="email" id="email" placeholder="Your Email">
+<input type="email" id="email" placeholder="Your Email" required>
 
-<textarea id="message" placeholder="Your Message"></textarea>
+<textarea id="message" placeholder="Your Message" required></textarea>
 
 <button type="submit">Send Message</button>
 
@@ -122,5 +134,4 @@ to expand my technical abilities in HTML, CSS, and JavaScript.
 </footer>
 
 </body>
-
 </html>

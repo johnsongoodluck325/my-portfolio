@@ -1,6 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* PROJECT SHOW / HIDE BUTTON */
+  const darkBtn = document.getElementById("darkModeToggle");
+
+  if (darkBtn) {
+
+    if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+    }
+
+    darkBtn.addEventListener("click", function () {
+
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+      } else {
+        localStorage.setItem("darkMode", "disabled");
+      }
+
+    });
+
+  }
+
 
   const buttons = document.querySelectorAll(".toggle-btn");
 
@@ -25,8 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  /* CONTACT FORM VALIDATION */
-
   const form = document.getElementById("contactForm");
   const error = document.getElementById("error");
 
@@ -44,10 +63,15 @@ document.addEventListener("DOMContentLoaded", function () {
       error.textContent = "";
 
       if (name === "" || email === "" || message === "") {
-
         error.textContent = "Please fill out all fields.";
         return;
+      }
 
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (!email.match(emailPattern)) {
+        error.textContent = "Please enter a valid email address.";
+        return;
       }
 
       error.style.color = "green";
@@ -59,8 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
-
-  /* TYPED.JS ANIMATION */
 
   const typingElement = document.getElementById("typing");
 
